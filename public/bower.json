@@ -1,0 +1,20 @@
+{
+  "name": "vod",
+  "authors": [
+    "tusharjain352 <tusharjain352@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "AngularJS-Toaster": "angularjs-toaster#^2.1.0"
+  }
+}

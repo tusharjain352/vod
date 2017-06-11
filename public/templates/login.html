@@ -1,0 +1,30 @@
+<div class="login">
+	<h1>Login</h1>
+    <form method="post">
+    	<input type="text" name="u" ng-model = "userLogin.email" placeholder="Email" required="required" />
+        <input type="password" name="p" ng-model = "userLogin.password" placeholder="Password" required="required" />
+        <input type="button" value="Let me in" class="btn btn-primary btn-block btn-large" ng-click = "login()">
+    </form>
+    
+</div>
+
+<div class="forgot">
+	<h1>Forgot Password</h1>
+    <form method="post">
+    	<input type="text" name="e" placeholder="Email" required="required" ng-model = "forgot.email"/>
+        <input type="button" value="Reset" class="btn btn-primary btn-block btn-large" ng-click = "">
+    </form>
+    
+</div>
+
+<div class="signup">
+	<h1>New User Register</h1>
+    <form method="post">
+    	<input type="text" name="e" placeholder="Email" ng-model = "newUser.email" required="required" />
+        <input type="password" name="p" placeholder="Password" ng-model = "newUser.password" required="required" />
+        <input type="text" name="n" placeholder="FullName" ng-model = "newUser.name" required="required" />
+        <input type="text" name="m" placeholder="Mobile" ng-model = "newUser.phone" required="required" />
+        <input type="button" value="Register" class="btn btn-primary btn-block btn-large" ng-click = "signup()">
+    </form>
+    
+</div>
