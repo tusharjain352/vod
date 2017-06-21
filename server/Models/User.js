@@ -8,11 +8,6 @@ let User = new Schema({
         default: null,
         required: true
     },
-    /*userImage: {
-        type: String,
-        trim: true,
-        default: null
-    },*/
     email: {
         type: String,
         trim: true,
@@ -30,17 +25,12 @@ let User = new Schema({
         trim: true,
         min: 8,
         max: 15
-    }/*,
-    OTPActive: {
-        type: Boolean,
-        default: false
-        
     },
-    OTP: {
-        type: String,
-        default: null
-        
-    }*/
+    favourite:[],
+    history:[{
+        id:String,
+        date:Number
+    }]
 });
 
 User.index({
@@ -48,13 +38,5 @@ User.index({
 }, {
     unique: true
 });
-
-User.index({
-    'name': 'text',
-    'email': 'text'
-}, {
-    "default_language": "en",
-    "language_override": "en"
-})
 
 module.exports = mongoose.model('User', User);

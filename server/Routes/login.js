@@ -18,17 +18,30 @@ router.post('/login', (req, res) => {
     });
 });
 
+/* Customer Favourites */
+router.post('/favourite', (req, res) => {
+    loginService.favourite(req.body, (data) => {
+        res.send(data);
+    });
+});
+
+/* Customer History */
+/*router.post('/history', (req, res) => {
+    loginService.history(req.body, (data) => {
+        res.send(data);
+    });
+});*/
 
 // router.get('/verifyForgot', function(req, res) {
 //     res.sendFile(path.resolve('html/reset.html'))
 // });
 
-// /* Change Password */
-// router.post('/changepassword', (req, res) => {
-//     loginService.changepassword(req.body, (data) => {
-//         res.send(data);
-//     });
-// });
+/* Forgot Password */
+router.post('/forgotPassword', (req, res) => {
+    loginService.forgotPassword(req.body, (data) => {
+        res.send(data);
+    });
+});
 
 
 

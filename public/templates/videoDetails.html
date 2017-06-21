@@ -1,0 +1,19 @@
+<div>
+Video Title----{{video.title}}</br>
+Video Url ----{{video.contents[0].url}}</br>
+<video width="400" controls>
+  <source src="{{video.contents[0].url}}" type="video/mp4">
+  <!-- <source src="http://d2bqeap5aduv6p.cloudfront.net/project_coderush_640x360_521kbs_56min.mp4" type="video/ogg"> -->
+  Your browser does not support HTML5 video.
+</video>
+</br>
+</br>
+</br>
+
+<input type="button" ng-if = "!isFavourite" value="Add to Favourites"  ng-click = "addToFav(true)"></input>
+<input type="button" ng-if = "isFavourite" value="Remove From Favourites"  ng-click = "addToFav(false)"></input>
+
+</div>
+
+
+

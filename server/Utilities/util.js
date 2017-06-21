@@ -41,6 +41,7 @@ let statusMessage = {
     EXPENSE_ADDED: "Added Expenses Successfully",
     USER_ADDED: "User created successfully.",
     AUTHENTICATED: "Authenticated successfully.",
+    FAVOURITE:"Added into favourites",
     UPDATED_SUCCESSFULLY: "User updated successfully.",
     USER_EXISTS: "User already exists for provided username.",
     USER_NOT_EXISTS: "Account does not exist, please contact your HR manager.",
@@ -65,7 +66,7 @@ let mailModule = nodemailer.createTransport({
 
 let sendOPTviaMail = (data) => {
     var mailOptions = {
-        from: '"Cold Storage " <bccicca@gmail.com>',
+        from: '"Accedeo " <bccicca@gmail.com>',
         to: data.email,
         subject: data.subject,
         text: data.text

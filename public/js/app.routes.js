@@ -18,5 +18,12 @@ vodApp.config(['$stateProvider', '$urlRouterProvider',
                 templateUrl: 'templates/dashboard.html',
                 controller: 'dashboardCtrl'
             })
+            .state('videoDetails', {
+                url: '/videoDetails',
+                params:{video:undefined},
+                templateUrl: 'templates/videoDetails.html',
+                controller:'videoCtrl'
+                
+            })
     }
 ]);

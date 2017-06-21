@@ -1,1 +1,1 @@
-var vodApp = angular.module('myApp',['ui.router','toaster']);
+var vodApp = angular.module('myApp',['ui.router', 'toastr']);

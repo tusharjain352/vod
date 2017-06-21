@@ -1,0 +1,23 @@
+<div>
+    <div class="row">
+        <div id="slide-container" tabIndex="1" ng-keydown="onKeyDown($event)">
+            <a class="btn btn-warning navigation left" ng-click="scroll('LEFT')" href="#" role="button" style="">
+                <i class="fa fa-angle-left fa-2x arrow"></i>
+            </a>
+            <div ng-repeat="video in videos" track-by="video.id" class="thumbnail {{video.selectedClass}}" ng-click="selectVideo(video)">
+                <img src="{{video.images[0].url}}" alt="..." />
+                <div class="caption">
+                    <h4>
+                        {{video.title}}
+                    </h4>
+                    <p>
+                        <input type="button" class="btn btn-primary" value="Select To Play"></input>
+                    </p>
+                </div>
+            </div>
+            <a class="btn btn-warning navigation right" ng-click="scroll('RIGHT')" href="#" role="button" style="">
+                <i class="fa fa-angle-right fa-2x arrow"></i>
+            </a>
+        </div>
+    </div>
+</div>

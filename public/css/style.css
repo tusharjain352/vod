@@ -79,3 +79,130 @@ input {
 input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
 
 
+
+.thumbnail{
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #403F3F
+}
+
+.thumbnail:hover {
+    background-color: #352C2C;
+}
+
+*:focus{
+    outline: none;
+}
+
+.video-selected{
+    border: solid 4px #138A86;
+    background-color: #2F1B1B;
+}
+
+.thumbnail .caption {
+    padding: 9px;
+    color: #F3E6E6;
+}
+
+#slide-container{
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 440px) and (min-width: 0px) {
+   .thumbnail{
+        display: block;  
+        margin-left: 50px;          
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 440px) {
+    #slide-container{
+        white-space: normal;
+    }
+}
+
+.arrow{
+    margin-top: 14px;
+}
+
+.navigation{
+    cursor: pointer;
+    height: 72px;
+    position: absolute;
+    display: block;
+    visibility: inherit;
+    width: 36px;
+    z-index: 1;
+    margin-bottom: auto;
+    margin-top: auto;
+    outline: none;
+    opacity: 0.8;
+    top: 230px;
+}
+
+.left{
+    border-bottom-right-radius: 36px;
+    border-top-right-radius: 36px;
+    left: 3px;
+}
+
+.right{
+    border-bottom-left-radius: 36px;
+    border-top-left-radius: 36px;
+    right: 3px;
+} 
+
+.btn-right-history {
+    float: right;
+    margin-top: -54px;
+}
+
+.small-thumbnail {
+    height: 94px;
+}
+
+.header-panel {
+    background-color: #12BBB5;
+    color: white;
+    padding: 4px;
+}
+
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+}
+
+
+.full-screen{        
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width:100%;        
+    height:100%;   
+    margin:0px;     
+} 
+
+.modal-video{
+    width:100%;
+    height:90%
+}
+
+@media screen and (max-width: 800px) and (min-width: 0px) {
+   .modal-video{
+         height:70%         
+    }
+}
