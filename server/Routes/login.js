@@ -52,6 +52,12 @@ router.post('/forgotPassword', (req, res) => {
     });
 });
 
+/* Forgot Password */
+router.post('/getHistory', (req, res) => {
+    loginService.getHistory(req.body, (data) => {
+        res.send(data);
+    });
+});
 
 
 

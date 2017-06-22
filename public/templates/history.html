@@ -1,0 +1,36 @@
+
+<div id="user-video-history-container" style="padding:4%; display: none">
+ 	<div class="row">
+        <div class="col-md-12">    
+            <a class="btn btn-info" style="margin-bottom:30px;float: right" href="#" ng-click="backToMain()">
+                <i class="fa fa-arrow-circle-o-left fa-lg"></i>&nbsp;
+                Back
+            </a>
+            <div class="clearfix"></div>
+
+            <ul class="timeline" id="user-video-history-list">
+                 <li class="time-label">
+                    <span class="bg-aqua">
+                        History
+                    </span>
+                </li>  
+
+                <li ng-repeat="log in history" track-by="log._id" ng-attr-id="{{ 'log_' + log._id}}" ng-model="log" >
+                    <i class="fa fa-video-camera bg-maroon"></i>
+                    <div class="timeline-item">
+                        <span class="time"><i class="fa fa-clock-o"></i>&nbsp;{{log.duration}}</span>
+                        <h3 class="timeline-header">
+                        <i class="fa fa-calendar"></i>&nbsp;{{log.date}}</h3>
+                        <div class="timeline-body">
+                           <!--  <a href="#" ng-click="play()"><img src="{{log.imgUrl}}" alt="..." class='small-thumbnail' /></a> -->
+                            <h3>{{log.id}} </h3>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-clock-o bg-gray"></i>
+                </li>
+            </ul>   
+        </div>
+    </div>  
+</div>   

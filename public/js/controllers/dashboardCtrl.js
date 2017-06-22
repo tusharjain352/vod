@@ -26,4 +26,8 @@ vodApp.controller('dashboardCtrl', ['$scope', 'httpFactory', 'toastr','$state', 
         $state.go('videoDetails',{'video':$scope.selectedVideo});
   }
 
+  $scope.showHistory = function(){
+    $state.go('history');
+  }
+
 }]);

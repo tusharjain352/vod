@@ -25,5 +25,10 @@ vodApp.config(['$stateProvider', '$urlRouterProvider',
                 controller:'videoCtrl'
                 
             })
+            .state('history', {
+                url: '/history',
+                templateUrl: 'templates/history.html',
+                controller:'historyCtrl'
+            })
     }
 ]);

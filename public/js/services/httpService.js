@@ -30,6 +30,10 @@ vodApp.factory('httpFactory', function($http) {
   factory.favouritesAndHistory = function(data) {
     return $http.post(url + '/favouriteAndHistory', data);
   };
+
+  factory.getHistory = function(data) {
+    return $http.post(url + '/getHistory', data);
+  };
   return factory;
 })
 
