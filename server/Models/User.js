@@ -26,6 +26,14 @@ let User = new Schema({
         min: 8,
         max: 15
     },
+    OTP_Active:{
+        type:Boolean,
+        default:false
+    },
+    OTP:{
+        type:String,
+        default:''
+    },
     favourite:[],
     history:[{
         id:String,

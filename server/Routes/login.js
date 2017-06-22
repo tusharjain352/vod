@@ -19,22 +19,31 @@ router.post('/login', (req, res) => {
 });
 
 /* Customer Favourites */
-router.post('/favourite', (req, res) => {
-    loginService.favourite(req.body, (data) => {
+router.post('/favouriteAndHistory', (req, res) => {
+    loginService.favouriteAndHistory(req.body, (data) => {
         res.send(data);
     });
 });
 
-/* Customer History */
-/*router.post('/history', (req, res) => {
-    loginService.history(req.body, (data) => {
+/* Admin Forgot Password Reset. 
+Consumes: application/json
+Required: encrypted query
+Produces: application/json
+*/
+router.post('/verifyForgot', (req, res) => {
+    // console.log("verifyForgot request recieved----",req.query);
+    loginService.verifyForgot(req.query, req.body, (data) => {
         res.send(data);
     });
-});*/
+});
 
-// router.get('/verifyForgot', function(req, res) {
-//     res.sendFile(path.resolve('html/reset.html'))
-// });
+/* Static About Us Page. 
+Consumes: 
+Produces: <HTML>
+*/
+router.get('/verifyForgot', function(req, res) {
+    res.sendFile(path.resolve('HTMLs/reset.html'))
+});
 
 /* Forgot Password */
 router.post('/forgotPassword', (req, res) => {

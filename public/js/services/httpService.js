@@ -27,8 +27,8 @@ vodApp.factory('httpFactory', function($http) {
     return $http.get(CONFIG.MOVIES_API + '/movies');
   }
 
-  factory.favourites = function(data) {
-    return $http.post(url + '/favourite', data);
+  factory.favouritesAndHistory = function(data) {
+    return $http.post(url + '/favouriteAndHistory', data);
   };
   return factory;
 })

@@ -9,22 +9,36 @@ vodApp.controller('videoCtrl', ['$scope', '$stateParams', 'httpFactory', functio
   } else {
     $scope.video = JSON.parse(sessionStorage.getItem('video'));
   }
+  
+  var histData = {
+    "videoId": $scope.video.id,
+    "userId": user[0]._id
+  };
+  
+  httpFactory.favouritesAndHistory(histData).then(function(response) {
+    console.log("history response",response);
+    if (val) {
+      $scope.isFavourite = true;
+    } else {
+      $scope.isFavourite = false;
+    }
+  })
 
   $scope.addToFav = function(val) {
     var data = {
-      "id":$scope.video.id,
-      "email":user[0].email
+      "videoId": $scope.video.id,
+      "userId": user[0]._id
     };
     if (val) {
       data['isFavourite'] = val;
     } else {
       data['isFavourite'] = val;
     }
-    httpFactory.favourites(data).then(function(response){
-    	console.log(response);
-      if(val){
+    httpFactory.favouritesAndHistory(data).then(function(response) {
+      console.log(response);
+      if (val) {
         $scope.isFavourite = true;
-      }else{
+      } else {
         $scope.isFavourite = false;
       }
     })
